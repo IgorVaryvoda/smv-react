@@ -1,27 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import {Helmet} from "react-helmet";
+import React from "react";
+import "./App.css";
+import logo from "./logo.svg";
+import Smv from "./Smv";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="center"><img src={logo} className="App-logo" alt="logo" /> <span className="plus">+</span>
-      <img
-        src="https://sirv-cdn.sirv.com/website/img/sirv-logo.svg"
-        width="250px"
-      /></div>
-        <div className="Sirv">
-          <div data-src="https://demo.sirv.com/example.spin"></div>
-          <div data-src="https://demo.sirv.com/image.jpg" data-type="zoom"></div>
-          <div data-src="https://demo.sirv.com/video.mp4"></div>
-        </div>
-        <Helmet>
-        <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
-        </Helmet>
+        <img src={logo} className="App-logo" alt="logo" />
+        <span className="plus">+</span>
+        <img className="Sirv-logo" src="https://sirv-cdn.sirv.com/website/img/sirv-logo.svg" alt="Sirv logo"/>
       </header>
+      <Smv />
     </div>
   );
 }
-
-export default App;
